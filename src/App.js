@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import {Routes, Route } from "react-router-dom";
+import PokemonMain from "./componenet/PokemonMain";
+import PokemonSecond from "./componenet/PokemonSecond";
+import PokemonThird from "./componenet/PokemonThird";
+import {GParentDiv} from "/var/www/html/React_project/pokemon/src/style_components/style.js";
 
-function App() {
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GParentDiv className="App">
+        <Routes>
+          <Route path='/search' element= {<PokemonMain num={props.num}/>}/>
+          <Route path='/detail' element= {<PokemonSecond num={props.num}/>}/>
+          <Route path='/third' element= {<PokemonThird num={props.num}/>}/>
+        </Routes>
+
+      </GParentDiv>
+    </>
   );
 }
 
