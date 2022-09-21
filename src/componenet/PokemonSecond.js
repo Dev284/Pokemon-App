@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "/var/www/html/React_project/pokemon/src/App.css";
+import "../App.css";
 import Header from "./header";
 import {
   MainDiv,
@@ -8,10 +8,9 @@ import {
   StyledA,
   Styleimg,
   ChildDiv,
-} from "/var/www/html/React_project/pokemon/src/style_components/style.js";
+} from "../style_components/style";
 import { useDispatch, useSelector } from "react-redux";
-import { GetPokemon, GetPokemonType } from "../action/action";
-import pokemonReducer from "../reducer/reducer";
+import { GetPokemon} from "../action/action";
 
 const PokemonMain = (props) => {
   const num = props.num

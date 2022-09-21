@@ -4,7 +4,7 @@ import {Routes, Route } from "react-router-dom";
 import PokemonMain from "./componenet/PokemonMain";
 import PokemonSecond from "./componenet/PokemonSecond";
 import PokemonThird from "./componenet/PokemonThird";
-import {GParentDiv} from "/var/www/html/React_project/pokemon/src/style_components/style.js";
+import {GParentDiv} from './style_components/style';
 
 
 function App(props) {
@@ -12,9 +12,9 @@ function App(props) {
     <>
       <GParentDiv className="App">
         <Routes>
-          <Route path='/search' element= {<PokemonMain num={props.num}/>}/>
+          <Route path='/' element= {<PokemonMain num={props.num}/>}/>
           <Route path='/detail' element= {<PokemonSecond num={props.num}/>}/>
-          <Route path='/third' element= {<PokemonThird num={props.num}/>}/>
+          <Route path='/type' element= {<PokemonThird num={props.num}/>}/>
         </Routes>
 
       </GParentDiv>
